@@ -9,31 +9,51 @@
 // (for now you can just manually fill in the array with "X"s and "O"s)
 
 const Board = (() => {
-    const gameBoard = ["X", "O", "X", "O"];
+    const gameBoard = ["", "", "", "", "", "", "", "", ""];
     const allDivs = document.querySelectorAll('.box');
-    const showDivs = () => {
-        console.log(allDivs);
-    }
-    const populateDisplay = () => {
-        for (let i = 0; i < gameBoard.length; i++) {
-            allDivs[i].innerText = gameBoard[i];
+    let round = 0;
+
+
+    const render = () => {
+        for (let i = 0; i < gameBoard.length; i++) {  
+            gameBoard.splice([i], 1, allDivs[i].innerText);
+            }
         }
+    
+    document.addEventListener('click', (e) => {
+            if (e.target.className === "box") {
+                roundCount();
+                populateDisplay(e);
+                render();
+            }
+        });
+
+    const populateDisplay = (e) => {
+        return e.target.innerText = "X";
     }
+    
+    const roundCount = (e) => {
+        round++;
+        console.log(round);
+        }
+    
     return {
         gameBoard,
-        showDivs,
-        populateDisplay
+        roundCount
     }
 
 })();
 
 const displayController = (() => {
-
+    
 
 })();
 
 const player1 = () => {
     score = 0;
+};
 
+const player2 = () => {
+    score = 0;
 };
 
