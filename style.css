@@ -1,13 +1,36 @@
+* {
+  box-sizing: border-box;
+}
+
 .game-board {
+  margin: 1%;
   display: grid;
   grid-template-rows: 200px 200px 200px;
   grid-template-columns: 200px 200px 200px;
   background-color: rgb(163, 199, 104);
 }
 
+.player-display {
+  margin: 1%;
+  display: grid;
+  grid-template-rows: 100px 100px;
+  grid-template-columns: 300px 300px;
+  background-color: rgb(163, 199, 104);
+}
+
+.player {
+  background: rgb(220, 213, 213);
+  border: 1px solid #555;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(0, 0, 0);
+  font-size: 35px;
+}
+
 body {
   background-color: rgb(119, 119, 145);
-  display: flex;
+  display: grid;
   justify-content: center;
 }
 
