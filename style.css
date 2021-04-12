@@ -1,0 +1,22 @@
+.game-board {
+  display: grid;
+  grid-template-rows: 200px 200px 200px;
+  grid-template-columns: 200px 200px 200px;
+  background-color: rgb(163, 199, 104);
+}
+
+body {
+  background-color: rgb(119, 119, 145);
+  display: flex;
+  justify-content: center;
+}
+
+.box {
+  background: rgb(220, 213, 213);
+  border: 1px solid #555;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(0, 0, 0);
+  font-size: 150px;
+}
